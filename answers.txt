@@ -1,0 +1,33 @@
+1. How do you rollback the last migration?
+  Answer:
+ php artisan migrate:rollback.
+------------------------------------------------
+
+2. How do you truncate a table in Laravel?
+  Answer:
+   php DB::table('table_name')->truncate();
+------------------------------------------------
+
+3. What happens if you try to insert a student with a country_id that doesn’t exist?
+Answer:
+If the relationship is defined with a foreign key constraint, the database will throw an error (Integrity constraint violation) 
+because the country_id is referencing a record that doesn't exist in the countries table.
+------------------------------------------------
+
+4. How can you delete a column from a table using a migration?
+Schema::table('students', function (Blueprint $table) {
+    $table->dropColumn('date_of_birth');
+});
+and we need to install library :composer require doctrine/dbal
+------------------------------------------------
+
+5.How do you change a column’s type in a migration?
+
+1_you need to install the doctrine/dbal package to enable column modifications:
+composer require doctrine/dbal
+
+2_Then, you can modify the column type in your migration like this:
+
+Schema::table('students', function (Blueprint $table) {
+    $table->string('date_of_birth')->change();
+});
