@@ -15,10 +15,9 @@ because the country_id is referencing a record that doesn't exist in the countri
 ------------------------------------------------
 
 4. How can you delete a column from a table using a migration?
-Schema::table('students', function (Blueprint $table) {
+
     $table->dropColumn('date_of_birth');
-});
-and we need to install library :composer require doctrine/dbal
+
 ------------------------------------------------
 
 5.How do you change a column’s type in a migration?
