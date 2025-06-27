@@ -6,6 +6,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# Soft Deletes vs Force Delete
+
+- **Soft Delete**: The record is not actually removed from the database; instead, a timestamp is set in the `deleted_at` column. This allows the record to be restored later if needed.  
+- **Force Delete**: The record is permanently removed from the database and cannot be recovered.
+
+# Benefits of Using PHP Enums in Laravel
+
+- Centralizes allowed values in one place, preventing scattered "magic strings".  
+- Helps avoid errors caused by typos or invalid string values.  
+- Improves code readability and maintainability by using explicit, named cases.
 
 ## About Laravel
 
