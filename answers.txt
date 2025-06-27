@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. How do you rollback the last migration?
   Answer:
  php artisan migrate:rollback.
@@ -28,3 +29,4 @@ composer require doctrine/dbal
 2_Then, you can modify the column type in your migration like this:
 
     $table->string('date_of_birth')->change();
+
